@@ -1,0 +1,13 @@
+<nav class=edm-nav id=edm-nav><div class=edm-nav-hol><div class=edm_container><div class=edm-nav-hol-logo><a href=https://ed-master.net/ ><picture><source sizes=100vw srcset="/images/logo-icon-45w.png 45w" type=image/png><source sizes=100vw srcset="/images/logo-icon-45w.webp 45w" type=image/webp><img alt="Edmaster Logo" class="" decoding=async loading=lazy src=/images/logo-icon-45w.png></picture></a></div><div class=edm-nav-hol-rest><div class=edm-nav-hol-rest-left><ul><li><a href=https://ed-master.net/ class="">Home</a><li><a href=https://ed-master.net/overview class="">Overview</a><li><a href=https://ed-master.net/expo/page-1 class="">Expo Program</a><li><a href=https://ed-master.net/onboarding class="">Getting Onboard</a></ul></div><div class=edm-nav-hol-rest-right><ul><li><a href=https://blog.edmaster.net target=_blank>Blog <small><i class="fas fa-arrow-up-right-from-square"></i></small></a><li><a href="https://ed-master.net/contact?department=sales" class="btn btn-sm btn-primary">Contact Sales</a><li><a href="https://ed-master.net/contact?department=support" class="btn btn-sm btn-success">Contact Support</a></ul></div></div><div class=edm-nav-hol-mobile-toggler><button class="btn btn-sm btn-primary">Menu <i class="fas fa-bars"></i></button></div></div></div></nav><script type=text/javascript>var toggler = document.querySelector(".edm-nav-hol-mobile-toggler button");
+var mobileNav = document.querySelector(".edm-nav-hol-rest");
+toggler.addEventListener('click', function (e) {
+    e.stopPropagation();
+    mobileNav.classList.toggle("shown");
+    if (mobileNav.classList.contains("shown")) {
+        toggler.innerHTML = "Close <i class='fas fa-times'></i>";
+    }
+    else {
+        toggler.innerHTML = "Menu <i class='fas fa-bars'></i>";
+    }
+});
+document.body.addEventListener('click', function (e) { return mobileNav.classList.remove("shown"); });</script>

@@ -1,0 +1,32 @@
+@import "common/nav";
+@import "common/footer";
+@import "variables";
+
+#edm, body {
+	@include font1;
+	max-width: calc(100vw - (100vw - 100%));
+	overflow-x: hidden;
+}
+
+.edm_container {
+	@include edm_container;
+}
+
+* {
+	scrollbar-color: #fff $clr1;
+	scrollbar-width: thin;
+
+	&::-webkit-scrollbar {
+		width: 11px;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: $clr1;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #fff;
+		border-radius: 6px;
+		border: 3px solid $clr1;
+	}
+}

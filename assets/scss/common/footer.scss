@@ -1,0 +1,167 @@
+.edm-footer {
+	background: #fff;
+
+	&-hol {
+		display: flex;
+		padding-top: 25px;
+		padding-bottom: 25px;
+
+		.footer-item {
+			flex-basis: calc(100%/5);
+			padding: 0 10px;
+
+			.footer-ad {
+				background: #F5F9FF;
+				text-align: center;
+				display: block;
+				aspect-ratio: 5/6;
+				border: 1px solid rgba(51,110,205,0.34);
+				border-radius: 6px;
+				padding: 10px;
+
+				img {
+					width: 110px;
+					display: inline-block;
+					margin: 0 0 20px 0;
+				}
+
+				p {
+					font-size: 13px;
+					color: #555;
+					margin: 0 0 15px 0;
+				}
+
+				button {
+					font-size: 12px;
+					margin: 0;
+				}
+
+			}
+
+			h5 {
+				@include font2;
+				font-size: 13px;
+				color: #222;
+				margin: 0 0 5px 0;
+			}
+
+			ul {
+				margin: 0 0 20px 0;
+				padding: 0;
+
+				li {
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+
+					a {
+						font-size: 13px;
+						text-decoration: none;
+						color: #222;
+
+						&:hover {
+							color: $clr1;
+						}
+
+					}
+				}
+			}
+		}
+
+		@media ($tablet) {
+			flex-wrap: wrap;
+			flex-direction: column;
+
+			.footer-item {
+				flex-basis: unset;
+
+				.footer-ad {
+					aspect-ratio: unset;
+				}
+			}
+		}
+	}
+
+	.footer-bottom {
+		background: #f8fbfe;
+
+		&-hol {
+			display: flex;
+			padding-top: 15px;
+			padding-bottom: 15px;
+
+			&-left {
+				flex: 1;
+
+				p {
+					font-size: 13px;
+					margin: 0;
+					padding: 10px 0;
+				}
+			}
+
+			&-right {
+				ul {
+					display: flex;
+					margin: 0;
+					padding: 0;
+
+					li {
+						font-size: 13px;
+						list-style-type: none;
+						margin: 0;
+						padding: 10px;
+
+						p {
+							margin: 0;
+						}
+
+						&:last-child {
+							padding-right: 0;
+						}
+
+						a {
+
+							i {
+								color: #333;
+								transition: ease 1s;
+
+								&.fa-twitter {
+									&:hover {
+										color: #1c99e7;
+									}
+								}
+								&.fa-instagram {
+									&:hover {
+										color: #f20000;
+									}
+								}
+								&.fa-facebook {
+									&:hover {
+										color: #1773ea;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			@media ($tablet) {
+				flex-direction: column-reverse;
+
+				&-left {
+					text-align: center;
+				}
+
+				&-right {
+					margin-bottom: 12px;
+
+					ul {
+						justify-content: center;
+					}
+				}
+			}
+		}
+	}
+}

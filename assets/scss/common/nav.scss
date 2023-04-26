@@ -1,0 +1,161 @@
+@import "../variables";
+
+.edm-nav {
+	padding-top: 74px;
+
+	&-hol {
+		background: #fff;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		height: 74px;
+		box-shadow: 0 1px 0 rgba(0,0,0,.1);
+		z-index: 100;
+
+		.edm_container {
+			display: flex;
+		}
+
+		&-logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 20px;
+
+			img {
+				height: 45px;
+				margin: 0;
+			}
+		}
+
+		&-rest {
+			flex: 1;
+			display: flex;
+			align-items: center;
+
+			&-left {
+				ul {
+					display: flex;
+					align-items: center;
+					margin: 0;
+					padding: 0;
+
+					li {
+						list-style-type: none;
+						margin: 0;
+						padding: 10px;
+
+						&:last-of-type {
+							padding-right: 0;
+						}
+
+						a {
+							color: #222;
+							font-size: 13px;
+							text-decoration: none;
+							display: inline-block;
+							padding: 4px 6px;
+							border-radius: 4px;
+							transition: ease 0.4s;
+
+							&.current-page, &:hover {
+								background: $clr1;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+
+			&-right {
+				display: flex;
+				justify-content: flex-end;
+				margin-left: auto;
+
+				ul {
+					display: flex;
+					align-items: center;
+					margin: 0;
+					padding: 0;
+
+					li {
+						list-style-type: none;
+						margin: 0;
+						padding: 5px;
+
+						&:last-of-type {
+							padding-right: 0;
+						}
+
+						a:not(.btn) {
+							color: #222;
+							font-size: 13px;
+							text-decoration: none;
+							display: inline-block;
+							padding: 4px 6px;
+							border-radius: 4px;
+						}
+					}
+				}
+			}
+
+			@media($tablet) {
+				background: #fff;
+				flex-direction: column;
+				position: absolute;
+				top: 0;
+				left: 5%;
+				width: 90%;
+				max-height: 0;
+				overflow: hidden;
+				box-shadow: 0 2px 5px rgba(0,0,0,.1);
+				transition: ease 1s;
+				border-top: solid 3px $clr1;
+				opacity: 0;
+
+				&.shown {
+					top: 74px;
+					max-height: 1000px;
+					opacity: 1;
+				}
+
+				&-left {
+					ul {
+						flex-direction: column;
+					}
+				}
+
+				&-right {
+					justify-content: center;
+					margin-left: unset;
+
+					ul {
+						flex-direction: column;
+
+						li {
+							text-align: center;
+							width: 100%;
+
+							a {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+
+		}
+
+		&-mobile-toggler {
+			display: none;
+
+			@media($tablet) {
+				display: flex;
+				margin: 0 0 0 auto;
+			}
+		}
+	}
+}
